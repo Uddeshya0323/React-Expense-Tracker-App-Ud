@@ -1,0 +1,193 @@
+/* Nav.css */
+
+/* General styling for the nav element */
+nav {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #f8f9fa; /* Adjust based on your design */
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+  }
+  
+  .logo {
+    height: 30px; /* Ensure this height matches the size you want */
+  }
+  
+  .logo-text {
+    margin-left: 10px;
+    font-size: 1.25rem; /* Adjust size as needed */
+    font-weight: bold;
+  }
+  
+  /* Style for the toggle button */
+  .social-icons-toggle {
+    display: inline-block;
+    margin-left: auto; /* Push toggle button to the right */
+    position: relative;
+  }
+  
+  .toggle-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .icon-container {
+    position: relative;
+  }
+  
+  .icon {
+    font-size: 24px; /* Size of the toggle button icon */
+    color: #000; /* Adjust color as needed */
+    transition: color 0.3s ease; /* Smooth color transition */
+  }
+  
+  .icon:hover {
+    color: #007bff; /* Adjust hover color as needed */
+  }
+  
+  /* Tooltip styling */
+  .tooltip {
+    visibility: hidden;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Position the tooltip above the icon */
+    left: 50%;
+    margin-left: -60px; /* Center the tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+    white-space: nowrap;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically, if container height is set */
+    width: 100%; /* Full width of parent */
+    padding: 1rem; /* Padding around the button, adjust as needed */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+  }
+  
+  .icon-container:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  /* ////////////// */
+  .social-icon {
+  position: relative;
+  display: inline-block;
+}
+
+.icon-container {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  width: auto; /* Adjust width if needed */
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 0.75rem; /* Adjust default font size */
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* Position above the icon */
+  left: 50%;
+  transform: translateX(-50%); /* Center the tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.social-icon:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media (max-width: 600px) {
+  .tooltip-text {
+    font-size: 0.6rem; /* Smaller font size for mobile view */
+    width: 80px; /* Adjust width as needed */
+  }
+}
+
+  
+  /* Social icons container */
+  .social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    visibility: hidden;
+    position: absolute;
+    top: 40px; /* Adjust based on your layout */
+    right: 0;
+  }
+  
+  .social-icons.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .social-icons.hide {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .social-icon .icon {
+    font-size: 24px; /* Size of social media icons */
+  }
+  
+  /* Responsive styling */
+  @media (max-width: 768px) {
+    .logo-text {
+      font-size: 1rem; /* Smaller font size for smaller screens */
+    }
+  
+    .social-icons {
+      top: 50px; /* Adjust for smaller screens if needed */
+      right: 0;
+      flex-direction: column; /* Stack social icons vertically */
+      gap: 5px;
+    }
+  
+    .toggle-button .icon {
+      font-size: 20px; /* Adjust icon size for smaller screens */
+    }
+  
+    .social-icon .icon {
+      font-size: 20px; /* Adjust icon size for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .logo {
+      height: 25px; /* Adjust logo size for very small screens */
+    }
+  
+    .logo-text {
+      font-size: 0.875rem; /* Smaller font size for very small screens */
+    }
+  
+    .toggle-button .icon {
+      font-size: 18px; /* Adjust icon size for very small screens */
+    }
+  
+    .social-icon .icon {
+      font-size: 18px; /* Adjust icon size for very small screens */
+    }
+  }
+  
